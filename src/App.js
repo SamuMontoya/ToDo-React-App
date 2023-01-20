@@ -7,9 +7,9 @@ import { CreateTodoButton } from "./components/CreateTodoButtonDir/CreateTodoBut
 // import './App.css';
 
 const todos = [
-  { text: "Cortar Cebolla", completed: true },
-  { text: "Tomar el curso de React", completed: false },
-  { text: "Llorar con la Llorona", completed: false },
+  { text: "Learn Nuxt.js", completed: true },
+  { text: "Learn React.js", completed: false },
+  { text: "Learn more about CSS", completed: false },
 ];
 
 function App() {
