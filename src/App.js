@@ -1,13 +1,13 @@
 import React from "react";
-import { TodoCounter } from "./components/TodoCounter";
-import { TodoSearch } from "./components/TodoSearch";
-import { TodoList } from "./components/TodoList";
-import { TodoItem } from "./components/TodoItem";
-import { CreateTodoButton } from "./components/CreateTodoButton";
+import { TodoCounter } from "./components/TodoCounterDir/TodoCounter";
+import { TodoSearch } from "./components/TodoSearchDir/TodoSearch";
+import { TodoList } from "./components/TodoListDir/TodoList";
+import { TodoItem } from "./components/TodoItemDir/TodoItem";
+import { CreateTodoButton } from "./components/CreateTodoButtonDir/CreateTodoButton";
 // import './App.css';
 
 const todos = [
-  { text: "Cortar Cebolla", completed: false },
+  { text: "Cortar Cebolla", completed: true },
   { text: "Tomar el curso de React", completed: false },
   { text: "Llorar con la Llorona", completed: false },
 ];
@@ -15,15 +15,14 @@ const todos = [
 function App() {
   return (
     <React.Fragment>
-     <TodoCounter />
+      <TodoCounter />
       <TodoSearch />
       <TodoList>
         {todos.map((todo) => (
-          <TodoItem key={todo.text} text={todo.text} />
+          <TodoItem key={todo.text} text={todo.text} completed={todo.completed} />
         ))}
       </TodoList>
       <CreateTodoButton />
-      
     </React.Fragment>
   );
 }
